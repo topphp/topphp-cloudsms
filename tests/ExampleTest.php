@@ -25,7 +25,7 @@ class ExampleTest extends TestCase
         //$arr=$ShortMessage
         //    ->setTemplateParam("{code:1223}")
         //    ->setCode(86)
-        //    ->setMobile('15332097358')
+        //    ->setMobile('xxxxxx') 手机号
         //    ->setSignatureId("25")
         //    ->setTemplateId("36")
         //    ->sendMessage();

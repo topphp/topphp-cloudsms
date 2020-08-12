@@ -1,6 +1,4 @@
-build
-composer.lock
+# Created by .ignore support plugin (hsz.mobi)
+.idea/
 vendor
-.phpunit.result.cache
-.idea
-.DS_Store
+build

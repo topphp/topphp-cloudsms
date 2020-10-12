@@ -14,8 +14,8 @@
     "require": {
         "php": "~7.2",
         "ext-curl": "^7.2",
-        "lizhijun/des3": "^1.0",
-        "ext-json": "*"
+        "ext-json": "*",
+        "ext-openssl": "*"
     },
     "require-dev": {
         "squizlabs/php_codesniffer": "^3.5"

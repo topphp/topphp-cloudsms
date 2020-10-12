@@ -6,12 +6,12 @@ use Tophp\TophpCloudsms\parameterInjection\ShortMessageRelevant;
 
 class ShortMessage extends ShortMessageRelevant
 {
-    private $sendMessagesd = 'mobile,code,signatureId,templateId,templateParam';
-    private $listCompanyPayLogs = 'pageNum,pageSize';
-    private $listCompanySmsLogs = 'pageNum,pageSize,type';
-    private $companyPaySetMeal = 'type,payPlanId,payType';
+    private $sendMessages            = 'mobile,code,signatureId,templateId,templateParam';
+    private $listCompanyPayLogs      = 'pageNum,pageSize';
+    private $listCompanySmsLogs      = 'pageNum,pageSize,type';
+    private $companyPaySetMeal       = 'type,payPlanId,payType';
     private $companyPaySetMealNumber = 'type,count,payType';
-    private $companyPaySetMealMoney = 'type,money,payType';
+    private $companyPaySetMealMoney  = 'type,money,payType';
 
     private $companyPay_fun = 'companyPay';
 
@@ -22,18 +22,17 @@ class ShortMessage extends ShortMessageRelevant
      */
     public function sendMessage()
     {
-        $sendMessagesd = array_flip(explode(',', $this->sendMessagesd));
-        $data['mobile'] = $this->getMobile();
-        $data['code'] = $this->getCode();
-        $data['signatureId'] = $this->getSignatureId();
-        $data['templateId'] = $this->getTemplateId();
+        $sendMessages          = array_flip(explode(',', $this->sendMessages));
+        $data['mobile']        = $this->getMobile();
+        $data['code']          = $this->getCode();
+        $data['signatureId']   = $this->getSignatureId();
+        $data['templateId']    = $this->getTemplateId();
         $data['templateParam'] = $this->getTemplateParam();
-        foreach ($sendMessagesd as $k => $v) {
+        foreach ($sendMessages as $k => $v) {
             if (!$data[$k]) {
                 return $this->msgAttr(301, $k);
             }
         }
-
         return $this->sendPost(__FUNCTION__, $data);
     }
 
@@ -116,8 +115,8 @@ class ShortMessage extends ShortMessageRelevant
     public function listCompanyPayLogs()
     {
         $listCompanyPayLogs = array_flip(explode(',', $this->listCompanyPayLogs));
-        $data['pageNum'] = $this->getPageNum();
-        $data['pageSize'] = $this->getPageSize();
+        $data['pageNum']    = $this->getPageNum();
+        $data['pageSize']   = $this->getPageSize();
 
         foreach ($listCompanyPayLogs as $k => $v) {
             if (!$data[$k]) {
@@ -126,7 +125,7 @@ class ShortMessage extends ShortMessageRelevant
         }
         $data['condition'] = [
             'startTime' => $this->getStartTime(),   #条件必须填一个 以时间戳的格式
-            'endTime' => $this->getEndTime()
+            'endTime'   => $this->getEndTime()
         ];
         return $this->sendPost(__FUNCTION__, $data);
     }
@@ -155,9 +154,9 @@ class ShortMessage extends ShortMessageRelevant
     {
 
         $listCompanySmsLogs = array_flip(explode(',', $this->listCompanySmsLogs));
-        $data['pageNum'] = $this->getPageNum();
-        $data['pageSize'] = $this->getPageSize();
-        $data['type'] = $this->getType();
+        $data['pageNum']    = $this->getPageNum();
+        $data['pageSize']   = $this->getPageSize();
+        $data['type']       = $this->getType();
         foreach ($listCompanySmsLogs as $k => $v) {
             if (!$data[$k]) {
                 return $this->msgAttr(301, $k);
@@ -166,8 +165,8 @@ class ShortMessage extends ShortMessageRelevant
         unset($data['type']);
         $data['condition'] = [
             'phone' => $this->getPhone(),   #条件必须填一个 以时间戳的格式
-            'date' => $this->getDate(),
-            'type' => $this->getType()
+            'date'  => $this->getDate(),
+            'type'  => $this->getType()
         ];
 
         return $this->sendPost(__FUNCTION__, $data);
@@ -181,10 +180,10 @@ class ShortMessage extends ShortMessageRelevant
     public function companyPaySetMeal()
     {
         $companyPaySetMeal = array_flip(explode(',', $this->companyPaySetMeal));
-        $data = [
-            'type' => 1,
+        $data              = [
+            'type'      => 1,
             'payPlanId' => $this->getPayPlanId(), #套餐id
-            'payType' => $this->getPayType(), #1微信支付 2支付宝
+            'payType'   => $this->getPayType(),   #1微信支付 2支付宝
         ];
         foreach ($companyPaySetMeal as $k => $v) {
             if (!$data[$k]) {
@@ -203,9 +202,9 @@ class ShortMessage extends ShortMessageRelevant
     public function companyPaySetMealNumber()
     {
         $companyPaySetMealNumber = array_flip(explode(',', $this->companyPaySetMealNumber));
-        $data = [
-            'type' => 1,
-            'count' => $this->getCount(), #数量
+        $data                    = [
+            'type'    => 1,
+            'count'   => $this->getCount(),   #数量
             'payType' => $this->getPayType(), #1微信支付 2支付宝
         ];
         foreach ($companyPaySetMealNumber as $k => $v) {
@@ -225,9 +224,9 @@ class ShortMessage extends ShortMessageRelevant
     public function companyPaySetMealMoney()
     {
         $companyPaySetMealMoney = array_flip(explode(',', $this->companyPaySetMealMoney));
-        $data = [
-            'type' => 2,
-            'money' => $this->getMoney(), #价格
+        $data                   = [
+            'type'    => 2,
+            'money'   => $this->getMoney(),   #价格
             'payType' => $this->getPayType(), #1微信支付 2支付宝
         ];
         foreach ($companyPaySetMealMoney as $k => $v) {
@@ -247,6 +246,4 @@ class ShortMessage extends ShortMessageRelevant
     {
         return $this->sendPost(__FUNCTION__);
     }
-
-
 }

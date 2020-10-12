@@ -2,7 +2,6 @@
 
 namespace Tophp\TophpCloudsms\parameterInjection;
 
-
 /**
  * 短信相关
  * Class SendMessage
@@ -10,7 +9,6 @@ namespace Tophp\TophpCloudsms\parameterInjection;
  */
 class ShortMessageRelevant extends Base
 {
-
     protected $code;
     protected $mobile;
     protected $signatureId;
@@ -28,11 +26,10 @@ class ShortMessageRelevant extends Base
     protected $count;
     protected $money;
 
-
     /**
-     * @author Administrator
      * @param string $code
      * @return $this
+     * @author Administrator
      */
     public function setCode($code = '')
     {
@@ -41,9 +38,9 @@ class ShortMessageRelevant extends Base
     }
 
     /**
-     * @author Administrator
      * @param string $mobile
      * @return $this
+     * @author Administrator
      */
     public function setMobile($mobile = '')
     {
@@ -52,9 +49,9 @@ class ShortMessageRelevant extends Base
     }
 
     /**
-     * @author Administrator
      * @param string $signatureId
      * @return $this
+     * @author Administrator
      */
     public function setSignatureId($signatureId = '')
     {
@@ -63,9 +60,9 @@ class ShortMessageRelevant extends Base
     }
 
     /**
-     * @author Administrator
      * @param string $templateId
      * @return $this
+     * @author Administrator
      */
     public function setTemplateId($templateId = '')
     {
@@ -74,9 +71,9 @@ class ShortMessageRelevant extends Base
     }
 
     /**
-     * @author Administrator
      * @param string $templateParam
      * @return $this
+     * @author Administrator
      */
     public function setTemplateParam($templateParam = '')
     {
@@ -85,9 +82,9 @@ class ShortMessageRelevant extends Base
     }
 
     /**
-     * @author Administrator
      * @param string $pageNum
      * @return $this
+     * @author Administrator
      */
     public function setPageNum($pageNum = '')
     {
@@ -96,9 +93,9 @@ class ShortMessageRelevant extends Base
     }
 
     /**
-     * @author Administrator
      * @param string $pageSize
      * @return $this
+     * @author Administrator
      */
     public function setPageSize($pageSize = '')
     {
@@ -107,9 +104,9 @@ class ShortMessageRelevant extends Base
     }
 
     /**
-     * @author Administrator
      * @param string $startTime
      * @return $this
+     * @author Administrator
      */
     public function setStartTime($startTime = '')
     {
@@ -118,9 +115,9 @@ class ShortMessageRelevant extends Base
     }
 
     /**
-     * @author Administrator
      * @param string $endTime
      * @return $this
+     * @author Administrator
      */
     public function setEndTime($endTime = '')
     {
@@ -129,9 +126,9 @@ class ShortMessageRelevant extends Base
     }
 
     /**
-     * @author Administrator
      * @param string $type
      * @return $this
+     * @author Administrator
      */
     public function setType($type = '')
     {
@@ -140,9 +137,9 @@ class ShortMessageRelevant extends Base
     }
 
     /**
-     * @author Administrator
      * @param string $phone
      * @return $this
+     * @author Administrator
      */
     public function setPhone($phone = '')
     {
@@ -151,9 +148,9 @@ class ShortMessageRelevant extends Base
     }
 
     /**
-     * @author Administrator
      * @param string $date
      * @return $this
+     * @author Administrator
      */
     public function setDate($date = '')
     {
@@ -162,9 +159,9 @@ class ShortMessageRelevant extends Base
     }
 
     /**
-     * @author Administrator
      * @param string $payType
      * @return $this
+     * @author Administrator
      */
     public function setPayType($payType = '')
     {
@@ -173,9 +170,9 @@ class ShortMessageRelevant extends Base
     }
 
     /**
-     * @author Administrator
      * @param string $payPlanId
      * @return $this
+     * @author Administrator
      */
     public function setPayPlanId($payPlanId = '')
     {
@@ -184,9 +181,9 @@ class ShortMessageRelevant extends Base
     }
 
     /**
-     * @author Administrator
      * @param string $count
      * @return $this
+     * @author Administrator
      */
     public function setCount($count = '')
     {
@@ -195,9 +192,9 @@ class ShortMessageRelevant extends Base
     }
 
     /**
-     * @author Administrator
      * @param string $money
      * @return $this
+     * @author Administrator
      */
     public function setMoney($money = '')
     {
@@ -206,8 +203,8 @@ class ShortMessageRelevant extends Base
     }
 
     /**
-     * @author Administrator
      * @return mixed
+     * @author Administrator
      */
     public function getCode()
     {
@@ -215,8 +212,8 @@ class ShortMessageRelevant extends Base
     }
 
     /**
-     * @author Administrator
      * @return mixed
+     * @author Administrator
      */
     public function getMobile()
     {
@@ -224,8 +221,8 @@ class ShortMessageRelevant extends Base
     }
 
     /**
-     * @author Administrator
      * @return mixed
+     * @author Administrator
      */
     public function getSignatureId()
     {
@@ -233,8 +230,8 @@ class ShortMessageRelevant extends Base
     }
 
     /**
-     * @author Administrator
      * @return mixed
+     * @author Administrator
      */
     public function getTemplateId()
     {
@@ -242,8 +239,8 @@ class ShortMessageRelevant extends Base
     }
 
     /**
-     * @author Administrator
      * @return mixed
+     * @author Administrator
      */
     public function getTemplateParam()
     {
@@ -251,8 +248,8 @@ class ShortMessageRelevant extends Base
     }
 
     /**
-     * @author Administrator
      * @return mixed
+     * @author Administrator
      */
     public function getPageNum()
     {
@@ -260,8 +257,8 @@ class ShortMessageRelevant extends Base
     }
 
     /**
-     * @author Administrator
      * @return mixed
+     * @author Administrator
      */
     public function getPageSize()
     {
@@ -269,8 +266,8 @@ class ShortMessageRelevant extends Base
     }
 
     /**
-     * @author Administrator
      * @return mixed
+     * @author Administrator
      */
     public function getStartTime()
     {
@@ -278,8 +275,8 @@ class ShortMessageRelevant extends Base
     }
 
     /**
-     * @author Administrator
      * @return mixed
+     * @author Administrator
      */
     public function getEndTime()
     {
@@ -287,8 +284,8 @@ class ShortMessageRelevant extends Base
     }
 
     /**
-     * @author Administrator
      * @return mixed
+     * @author Administrator
      */
     public function getType()
     {
@@ -296,8 +293,8 @@ class ShortMessageRelevant extends Base
     }
 
     /**
-     * @author Administrator
      * @return mixed
+     * @author Administrator
      */
     public function getPhone()
     {
@@ -305,8 +302,8 @@ class ShortMessageRelevant extends Base
     }
 
     /**
-     * @author Administrator
      * @return mixed
+     * @author Administrator
      */
     public function getDate()
     {
@@ -314,8 +311,8 @@ class ShortMessageRelevant extends Base
     }
 
     /**
-     * @author Administrator
      * @return mixed
+     * @author Administrator
      */
     public function getPayType()
     {
@@ -323,8 +320,8 @@ class ShortMessageRelevant extends Base
     }
 
     /**
-     * @author Administrator
      * @return mixed
+     * @author Administrator
      */
     public function getPayPlanId()
     {
@@ -332,8 +329,8 @@ class ShortMessageRelevant extends Base
     }
 
     /**
-     * @author Administrator
      * @return mixed
+     * @author Administrator
      */
     public function getCount()
     {
@@ -341,13 +338,11 @@ class ShortMessageRelevant extends Base
     }
 
     /**
-     * @author Administrator
      * @return mixed
+     * @author Administrator
      */
     public function getMoney()
     {
         return $this->money;
     }
- 
-
 }

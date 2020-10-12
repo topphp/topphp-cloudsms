@@ -1,5 +1,5 @@
 {
-    "name": "tophp/tophp-cloudsms",
+    "name": "topphp/tophp-cloudsms",
     "type": "library",
     "description": "Components based on Kaituo cloud SMS",
     "license": "MIT",

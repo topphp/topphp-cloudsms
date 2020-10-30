@@ -51,7 +51,7 @@ $ShortMessage->setUrl($url)->setKey($key)->setIv($iv)->setAccount($account)->set
 $arr=$ShortMessage
     ->setTemplateParam("{code:1223}") 
     ->setCode(86)国家号，中国86 国际通过国际配置接口查询
-    ->setMobile('15332097358') #手机号多个用,隔开
+    ->setMobile('xxxxxxxx') #手机号多个用,隔开
     ->setSignatureId("25") #签名id,签名接口获取
     ->setTemplateId("36")# 模板id，模板接口获取
     ->sendMessage();

@@ -168,6 +168,6 @@ class Base
     {
         $data['code'] = $code;
         $data['msg']  = $msg . '必填值';
-        return json_encode($data);
+        return $data;
     }
 }

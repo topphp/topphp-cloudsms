@@ -164,7 +164,7 @@ class Base
         return json_decode($response, true);
     }
 
-    public function msgAttr($msg, $code = 301)
+    public function msgAttr($code = 301, $msg = '')
     {
         $data['code'] = $code;
         $data['msg']  = $msg . '必填值';

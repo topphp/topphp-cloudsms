@@ -33,7 +33,7 @@ $ composer require topphp/topphp-cloudsms
 初始化
 ``` 
 <?php
-namespace Tophp\TophpCloudsms;
+namespace Topphp\TopphpCloudsms;
 
 
 include 'vendor/autoload.php';

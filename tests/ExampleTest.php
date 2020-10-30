@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Topphp\Test;
 
 use PHPUnit\Framework\TestCase;
-use Tophp\TophpCloudsms\ShortMessage;
+use Topphp\TopphpCloudsms\ShortMessage;
 
 class ExampleTest extends TestCase
 {

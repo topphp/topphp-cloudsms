@@ -1,8 +1,8 @@
 <?php
 
-namespace Tophp\TophpCloudsms;
+namespace Topphp\TopphpCloudsms;
 
-use Tophp\TophpCloudsms\parameterInjection\ShortMessageRelevant;
+use Topphp\TopphpCloudsms\parameterInjection\ShortMessageRelevant;
 
 class ShortMessage extends ShortMessageRelevant
 {

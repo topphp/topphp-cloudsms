@@ -1,5 +1,5 @@
 {
-    "name": "topphp/tophp-cloudsms",
+    "name": "topphp/topphp-cloudsms",
     "type": "library",
     "description": "Components based on Kaituo cloud SMS",
     "license": "MIT",
@@ -22,7 +22,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Tophp\\TophpCloudsms\\": "src"
+            "Topphp\\TopphpCloudsms\\": "src"
         }
     },
     "autoload-dev": {

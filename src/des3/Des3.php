@@ -6,9 +6,9 @@
  * @author sleep <sleep@kaituocn.com>
  */
 
-namespace Tophp\TophpCloudsms\des3;
+namespace Topphp\TopphpCloudsms\des3;
 
-use Tophp\TophpCloudsms\des3\exception\InvalidArgumentException;
+use Topphp\TopphpCloudsms\des3\exception\InvalidArgumentException;
 
 class Des3
 {

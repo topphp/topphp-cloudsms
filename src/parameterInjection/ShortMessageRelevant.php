@@ -1,6 +1,6 @@
 <?php
 
-namespace Tophp\TophpCloudsms\parameterInjection;
+namespace Topphp\TopphpCloudsms\parameterInjection;
 
 /**
  * 短信相关

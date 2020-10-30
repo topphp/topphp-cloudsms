@@ -6,7 +6,7 @@
  * @author sleep <sleep@kaituocn.com>
  */
 
-namespace Tophp\TophpCloudsms\des3\exception;
+namespace Topphp\TopphpCloudsms\des3\exception;
 
 class Exception extends \Exception
 {

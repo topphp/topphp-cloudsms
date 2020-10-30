@@ -5,10 +5,10 @@
  */
 declare(strict_types=1);
 
-namespace Tophp\TophpCloudsms\parameterInjection;
+namespace Topphp\TopphpCloudsms\parameterInjection;
 
-use Tophp\TophpCloudsms\des3\Des3;
-use Tophp\TophpCloudsms\des3\exception\InvalidArgumentException;
+use Topphp\TopphpCloudsms\des3\Des3;
+use Topphp\TopphpCloudsms\des3\exception\InvalidArgumentException;
 
 class Base
 {

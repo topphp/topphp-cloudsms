@@ -82,6 +82,15 @@ class ShortMessage extends ShortMessageRelevant
     }
 
     /**
+     * 获取国际配置集合
+     * @return array
+     */
+    public function listInternationalConfigs()
+    {
+        return $this->sendPost(__FUNCTION__);
+    }
+
+    /**
      * 获取模板
      * @param string $templateId
      * @return array|false|string

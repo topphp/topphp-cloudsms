@@ -174,6 +174,18 @@ class Sms
         return $this->get("/sms/list", $options);
     }
 
+    public function rechargeList($params)
+    {
+        $options = [
+            'page'     => $params['page'] ?? 1,
+            'pageSize' => $params['pageSize'] ?? 10,
+        ];
+        if ($params['state']) {
+            $options['state'] = $params['state'];
+        }
+        return $this->get("/sms/recharge", $options);
+    }
+
     public function hello($data = [])
     {
         return $this->get("/sms/hello", $data);

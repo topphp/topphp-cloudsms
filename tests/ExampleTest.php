@@ -131,6 +131,20 @@ class ExampleTest extends TestCase
         $this->assertIsArray($res);
     }
 
+    public function testRechargeList()
+    {
+        $res = $this->sms
+            ->setTel("18502243993")
+            ->setSecret("d39af4d2-2c77-452b-84a2-4b1e5462000b")
+            ->rechargeList([
+                'page'     => 1,
+                'pageSize' => 1,
+                'state'    => 1,
+            ]);
+        var_dump(json_encode($res));
+        $this->assertIsArray($res);
+    }
+
     public function testSend()
     {
         $res = $this->sms

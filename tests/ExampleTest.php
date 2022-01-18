@@ -130,4 +130,18 @@ class ExampleTest extends TestCase
         var_dump(json_encode($res));
         $this->assertIsArray($res);
     }
+
+    public function testSend()
+    {
+        $res = $this->sms
+            ->setTel("18502243993")
+            ->setTargetTel("18502243993")
+            ->setSecret("d39af4d2-2c77-452b-84a2-4b1e5462000b")
+            ->setSignId(1)
+            ->setTemplateId(1)
+            ->setTemplateParams(['code' => '1234'])
+            ->sendSms();
+        var_dump(json_encode($res));
+        $this->assertIsArray($res);
+    }
 }

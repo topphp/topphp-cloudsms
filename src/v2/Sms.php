@@ -110,9 +110,10 @@ class Sms
     }
 
     /**
-     * @param mixed $templateParams
+     * @param  $templateParams
+     * @return Sms
      */
-    public function setTemplateParams($templateParams): self
+    public function setTemplateParams($templateParams = []): self
     {
         $this->templateParams = $templateParams;
         return $this;
@@ -186,7 +187,6 @@ class Sms
                 'header'  => sprintf("Authorization: Bearer %s\r\n", md5($this->tel . $this->secret)) .
                     "Content-type: application/x-www-form-urlencoded\r\n" .
                     sprintf("tel: %s\r\n", $this->tel),
-//                'content' => http_build_query($data),
                 'timeout' => 15 * 60 // 超时时间（单位:s）
             ]
         ];

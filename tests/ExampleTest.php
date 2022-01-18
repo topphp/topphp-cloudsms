@@ -4,21 +4,30 @@ declare(strict_types=1);
 
 namespace Topphp\Test;
 
+use DateTimeInterface;
 use PHPUnit\Framework\TestCase;
 use Topphp\TopphpCloudsms\ShortMessage;
+use Topphp\TopphpCloudsms\v2\Sms;
 
 class ExampleTest extends TestCase
 {
+    private $sms;
 
+    public function __construct()
+    {
+        parent::__construct();
+        $this->sms = new Sms();
+        $this->sms->setApiUrl("https://smsv2.kaituocn.com/api");
+    }
 
     public function testAc()
     {
 
-        $account = 'xxx';
-        $password = 'xxx';
-        $key = 'xxxx';
-        $iv = 'xxxx';
-        $url = 'xxxxxx';
+        $account      = 'xxx';
+        $password     = 'xxx';
+        $key          = 'xxxx';
+        $iv           = 'xxxx';
+        $url          = 'xxxxxx';
         $ShortMessage = new ShortMessage();
         $ShortMessage->setUrl($url)->setKey($key)->setIv($iv)->setAccount($account)->setPassword($password);
         #发送短信
@@ -38,14 +47,14 @@ class ExampleTest extends TestCase
         print_r($arr);
         #获取签名
         $signatureId = 26;
-        $arr = $ShortMessage->getSignature($signatureId);
+        $arr         = $ShortMessage->getSignature($signatureId);
         print_r($arr);
         #获取模板集合
         $arr = $ShortMessage->listTemplates();
         print_r($arr);
         //获取模板
         $templateId = '38';
-        $arr = $ShortMessage->getTemplate($templateId);
+        $arr        = $ShortMessage->getTemplate($templateId);
         print_r($arr);
         #获取支付配置
         $arr = $ShortMessage->getPaySettingData();
@@ -56,7 +65,7 @@ class ExampleTest extends TestCase
         print_r($arr);
         #获取支付记录
         $orderNo = 'N20200717150058810220';
-        $arr = $ShortMessage->getCompanyPayLog($orderNo);
+        $arr     = $ShortMessage->getCompanyPayLog($orderNo);
         print_r($arr);
         #获取短信日志集合
         $arr = $ShortMessage
@@ -83,5 +92,42 @@ class ExampleTest extends TestCase
 
 
         print_r($arr);
+    }
+
+    public function testLogin()
+    {
+        $res = $this->sms->login("18502243993", "d39af4d2-2c77-452b-84a2-4b1e5462000b");
+        var_dump($res);
+        $this->assertIsArray($res);
+    }
+
+    public function testHello()
+    {
+        $res = $this->sms->setTel("18502243993")
+            ->setSecret("d39af4d2-2c77-452b-84a2-4b1e5462000b")->hello([]);
+        var_dump($res);
+        $this->assertIsArray($res);
+    }
+
+    public function testSendRecordList()
+    {
+        var_dump(date(DateTimeInterface::ATOM));
+        var_dump(date(DateTimeInterface::RFC3339));
+        var_dump(date(DateTimeInterface::RFC3339_EXTENDED));
+        var_dump(date(DateTimeInterface::W3C));
+        var_dump(date(DateTimeInterface::ISO8601));
+        $res = $this->sms
+            ->setTel("18502243993")
+            ->setSecret("d39af4d2-2c77-452b-84a2-4b1e5462000b")
+            ->sendRecordList([
+                'page'      => 1,
+                'pageSize'  => 20,
+                'startTime' => '2022-01-01',
+                'endTime'   => '2022-01-17',
+                'targetTel' => "",
+                'type'      => "",
+            ]);
+        var_dump(json_encode($res));
+        $this->assertIsArray($res);
     }
 }

@@ -200,6 +200,10 @@ class Sms
                     "Content-type: application/x-www-form-urlencoded\r\n" .
                     sprintf("tel: %s\r\n", $this->tel),
                 'timeout' => 15 * 60 // 超时时间（单位:s）
+            ],
+            'ssl' => [
+                'verify_peer' => false,
+                'verify_peer_name' => false,
             ]
         ];
         $context = stream_context_create($options);
@@ -218,6 +222,10 @@ class Sms
                     sprintf("tel: %s\r\n", $this->tel),
                 'content' => $data,
                 'timeout' => 15 * 60 // 超时时间（单位:s）
+            ],
+            'ssl' => [
+                'verify_peer' => false,
+                'verify_peer_name' => false,
             ]
         ];
         $context = stream_context_create($options);
